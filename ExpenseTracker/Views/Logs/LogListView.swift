@@ -44,11 +44,13 @@ struct LogListView: View {
                         CategoryImageView(category: log.categoryEnum)
 
                         VStack(alignment: .leading, spacing: 8) {
-                            Text(log.nameText).font(.headline)
-                            Text(log.dateText).font(.subheadline)
+                            Text(log.nameText).font(.headline).foregroundColor(.black)
+                            Text(log.noteText).font(.subheadline).foregroundColor(.gray)
+                            Text(log.dateText).font(.subheadline).foregroundColor(.black)
+                            
                         }
                         Spacer()
-                        Text(log.amountText).font(.headline)
+                        Text(log.amountText).font(.headline).foregroundColor(.black)
                     }
                     .padding(.vertical, 4)
                 }
@@ -65,7 +67,9 @@ struct LogListView: View {
                     name: log.name ?? "",
                     amount: log.amount?.doubleValue ?? 0,
                     category: Category(rawValue: log.category ?? "") ?? .food,
+                    note: log.note ?? "Your note goes here",
                     date: log.date ?? Date()
+                    
                 )
             }
         }

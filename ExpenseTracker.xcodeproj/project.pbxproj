@@ -33,6 +33,12 @@
 		8BE1F57F244C0D720017E21D /* SelectSortOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1F57E244C0D720017E21D /* SelectSortOrderView.swift */; };
 		8BE1F581244C0DC80017E21D /* LogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1F580244C0DC80017E21D /* LogListView.swift */; };
 		8BE1F583244C0DD10017E21D /* LogFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1F582244C0DD10017E21D /* LogFormView.swift */; };
+		CBA85CE52895EC4A007D96AD /* CallendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA85CE42895EC4A007D96AD /* CallendarView.swift */; };
+		CBA85CE8289625CE007D96AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA85CE7289625CE007D96AD /* NetworkManager.swift */; };
+		CBA85CEA28962647007D96AD /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA85CE928962647007D96AD /* NetworkSession.swift */; };
+		CBA85CEC28962723007D96AD /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA85CEB28962723007D96AD /* ApiService.swift */; };
+		CBADC4282897537B000E48EB /* CalendarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADC4272897537B000E48EB /* CalendarTabView.swift */; };
+		CBDDB88828972B9F006E05B1 /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDB88728972B9F006E05B1 /* AppStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		8BE1F57E244C0D720017E21D /* SelectSortOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSortOrderView.swift; sourceTree = "<group>"; };
 		8BE1F580244C0DC80017E21D /* LogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListView.swift; sourceTree = "<group>"; };
 		8BE1F582244C0DD10017E21D /* LogFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormView.swift; sourceTree = "<group>"; };
+		CBA85CE42895EC4A007D96AD /* CallendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarView.swift; sourceTree = "<group>"; };
+		CBA85CE7289625CE007D96AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CBA85CE928962647007D96AD /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		CBA85CEB28962723007D96AD /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CBADC4272897537B000E48EB /* CalendarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabView.swift; sourceTree = "<group>"; };
+		CBDDB88728972B9F006E05B1 /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,10 @@
 			children = (
 				8BE1F53E244C04E90017E21D /* AppDelegate.swift */,
 				8BE1F540244C04E90017E21D /* SceneDelegate.swift */,
+				CBA85CE7289625CE007D96AD /* NetworkManager.swift */,
+				CBA85CE928962647007D96AD /* NetworkSession.swift */,
+				CBA85CEB28962723007D96AD /* ApiService.swift */,
+				CBDDB88628972B73006E05B1 /* Styles */,
 				8BE1F560244C07EC0017E21D /* Views */,
 				8BE1F55B244C071C0017E21D /* Helpers */,
 				8BE1F555244C057C0017E21D /* Models */,
@@ -144,6 +160,7 @@
 				8BE1F542244C04E90017E21D /* ContentView.swift */,
 				8BE1F56C244C09770017E21D /* Common Views */,
 				8BE1F565244C08AF0017E21D /* Logs */,
+				CBADC4262897532D000E48EB /* Summary */,
 				8BE1F563244C08A20017E21D /* Dashboard */,
 			);
 			path = Views;
@@ -171,6 +188,7 @@
 		8BE1F56C244C09770017E21D /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
+				CBA85CE62895EC52007D96AD /* Callendar */,
 				8BE1F571244C0AB20017E21D /* SwiftUICharts */,
 				8BE1F56D244C098B0017E21D /* CategoryImageView.swift */,
 				8BE1F57A244C0C640017E21D /* SearchBar.swift */,
@@ -189,6 +207,30 @@
 				8BE1F575244C0AB20017E21D /* PieChartView.swift */,
 			);
 			path = SwiftUICharts;
+			sourceTree = "<group>";
+		};
+		CBA85CE62895EC52007D96AD /* Callendar */ = {
+			isa = PBXGroup;
+			children = (
+				CBA85CE42895EC4A007D96AD /* CallendarView.swift */,
+			);
+			path = Callendar;
+			sourceTree = "<group>";
+		};
+		CBADC4262897532D000E48EB /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				CBADC4272897537B000E48EB /* CalendarTabView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		CBDDB88628972B73006E05B1 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CBDDB88728972B9F006E05B1 /* AppStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,16 +307,20 @@
 				8BE1F579244C0AB20017E21D /* PieChartView.swift in Sources */,
 				8BE1F557244C05AB0017E21D /* ExpenseLog+Extension.swift in Sources */,
 				8BE1F53F244C04E90017E21D /* AppDelegate.swift in Sources */,
+				CBADC4282897537B000E48EB /* CalendarTabView.swift in Sources */,
 				8BE1F541244C04E90017E21D /* SceneDelegate.swift in Sources */,
 				8BE1F562244C08020017E21D /* CoreDataStack.swift in Sources */,
+				CBA85CEC28962723007D96AD /* ApiService.swift in Sources */,
 				8BE1F55D244C07240017E21D /* Utils.swift in Sources */,
 				8BE1F543244C04E90017E21D /* ContentView.swift in Sources */,
+				CBA85CEA28962647007D96AD /* NetworkSession.swift in Sources */,
 				8BE1F576244C0AB20017E21D /* PieChartRow.swift in Sources */,
 				8BE1F57D244C0CD90017E21D /* FilterCategoriesView.swift in Sources */,
 				8BE1F583244C0DD10017E21D /* LogFormView.swift in Sources */,
 				8BE1F55F244C07BC0017E21D /* Sort.swift in Sources */,
 				8BE1F56B244C09510017E21D /* Extensions.swift in Sources */,
 				8BE1F56E244C098B0017E21D /* CategoryImageView.swift in Sources */,
+				CBDDB88828972B9F006E05B1 /* AppStyles.swift in Sources */,
 				8BE1F569244C08D60017E21D /* LogsTabView.swift in Sources */,
 				8BE1F578244C0AB20017E21D /* PieChartCell.swift in Sources */,
 				8BE1F577244C0AB20017E21D /* Helpers.swift in Sources */,
@@ -284,7 +330,9 @@
 				8BE1F570244C0A1E0017E21D /* CategoryRowView.swift in Sources */,
 				8BE1F554244C05220017E21D /* ExpenseTracker.xcdatamodeld in Sources */,
 				8BE1F55A244C060B0017E21D /* Category.swift in Sources */,
+				CBA85CE8289625CE007D96AD /* NetworkManager.swift in Sources */,
 				8BE1F581244C0DC80017E21D /* LogListView.swift in Sources */,
+				CBA85CE52895EC4A007D96AD /* CallendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +473,7 @@
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ExpenseTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,6 +494,7 @@
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ExpenseTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

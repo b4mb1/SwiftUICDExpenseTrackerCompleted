@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-extension ExpenseLog: Identifiable {
+extension ExpenseLog {
     
     var categoryEnum: Category {
         Category(rawValue: category ?? "") ?? .other
@@ -25,6 +25,10 @@ extension ExpenseLog: Identifiable {
     
     var amountText: String {
         Utils.numberFormatter.string(from: NSNumber(value: amount?.doubleValue ?? 0)) ?? ""
+    }
+    
+    var noteText: String {
+        note ?? ""
     }
     
     static func fetchAllCategoriesTotalAmountSum(context: NSManagedObjectContext, completion: @escaping ([(sum: Double, category: Category)]) -> ()) {
@@ -83,5 +87,15 @@ extension ExpenseLog: Identifiable {
         }
     }
     
+    static func predicate(with timeRange: DateInterval) -> NSPredicate? {
+        var predicates = [NSPredicate]()
+        
+        predicates.append(NSPredicate(format: "date >= %@ AND date <= %@", argumentArray: [timeRange.start, timeRange.end]))
+        if predicates.isEmpty {
+            return nil
+        } else {
+            return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        }
+    }
 }
 

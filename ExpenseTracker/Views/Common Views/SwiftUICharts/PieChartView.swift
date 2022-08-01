@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-
-
 public struct PieChartView : View {
     public var data: [(value: Double, color: Color)]
     

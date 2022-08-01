@@ -69,10 +69,7 @@ struct FilterButtonView: View {
         }
         .foregroundColor(isSelected ? category.color : Color(UIColor.gray))
     }
-    
-    
 }
-
 
 struct FilterCategoriesView_Previews: PreviewProvider {
     static var previews: some View {

@@ -28,6 +28,15 @@ struct ContentView: View {
                     }
             }
             .tag(1)
+            
+            CalendarTabView()
+                .tabItem {
+                    VStack {
+                        Text("Summary")
+                        Image(systemName: "clock.arrow.circlepath")
+                    }
+            }
+            .tag(2)
         }
     }
 }

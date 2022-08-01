@@ -44,9 +44,6 @@ struct LogsTabView: View {
     func addTapped() {
         isAddFormPresented = true
     }
-    
-    
-    
 }
 
 struct LogsTabView_Previews: PreviewProvider {

@@ -23,4 +23,12 @@ struct Utils {
         return formatter
     }()
     
+    static func numberFormatterWithCurrency(currencyCode: String) -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.isLenient = true
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currencyCode
+        return formatter
+        
+    }
 }

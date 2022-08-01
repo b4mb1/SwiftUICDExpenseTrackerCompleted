@@ -17,7 +17,9 @@ struct LogFormView: View {
     @State var name: String = ""
     @State var amount: Double = 0
     @State var category: Category = .utilities
+    @State var note: String = ""
     @State var date: Date = Date()
+    
     
     @Environment(\.presentationMode)
     var presentationMode
@@ -25,7 +27,6 @@ struct LogFormView: View {
     var title: String {
         logToEdit == nil ? "Create Expense Log" : "Edit Expense Log"
     }
-    
     
     var body: some View {
         NavigationView {
@@ -40,6 +41,8 @@ struct LogFormView: View {
                         Text(category.rawValue.capitalized).tag(category)
                     }
                 }
+                TextField("Your note goes here", text: $note)
+                    .disableAutocorrection(true).foregroundColor(.gray)
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date")
                 }
@@ -72,6 +75,7 @@ struct LogFormView: View {
         log.name = self.name
         log.category = self.category.rawValue
         log.amount = NSDecimalNumber(value: self.amount)
+        log.note = self.note
         log.date = self.date
         
         do {

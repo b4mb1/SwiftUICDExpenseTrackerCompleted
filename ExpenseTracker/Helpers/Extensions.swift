@@ -14,4 +14,7 @@ extension Double {
         return Utils.numberFormatter.string(from: NSNumber(value: self)) ?? "0"
     }
     
+    func formattedCurrencyTextWithCurrency(currencyCode: String) -> String {
+        return Utils.numberFormatterWithCurrency(currencyCode: currencyCode).string(from: NSNumber(value: self)) ?? "0"
+    }
 }
